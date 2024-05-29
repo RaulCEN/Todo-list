@@ -1,0 +1,45 @@
+.add-todo-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 20rem;
+  margin: auto;
+}
+
+.add-todo-input {
+  padding: 0.5rem;
+  background: transparent;
+  border: solid 0.5px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 100%;
+}
+
+.add-todo-input:focus {
+  border: 1.5px solid #AE76A6;
+  outline: none;
+}
+
+.add-todo-button {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(163, 195, 217);
+  color: rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.add-todo-button:disabled {
+  cursor: default;
+  background-color: rgba(163, 195, 217, 0.5);
+}
+
+.add-todo-button:hover:not(:disabled) {
+  background-color: transparent;
+  border: 1px solid rgb(163, 195, 217);
+}

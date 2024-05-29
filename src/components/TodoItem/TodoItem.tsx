@@ -1,4 +1,5 @@
 import React from 'react';
+import './TodoItem.css'
 
 import { TodoTask } from '../../utils/types';
 
@@ -15,12 +16,12 @@ const TodoItem: React.FunctionComponent<TodoItemProps> = ({ task, loading, onChe
   const handleDeleteButton = () => onDeleteTodo(task.id);
 
   return (
-    <div>
-      <label>
+    <div className='todo-item-container'>
+      <label className='todo-item-label'>
         <input data-testid='todo_checkbox' checked={task.completed} type='checkbox' disabled={loading} onChange={handleCheckboxChange} />
         {task.name}
       </label>
-      <button data-testid='delete_todo' disabled={loading} onClick={handleDeleteButton}>delete</button>
+      <button data-testid='delete_todo' className='todo-item-delete' disabled={loading} onClick={handleDeleteButton}>Delete</button>
     </div>
   )
 }

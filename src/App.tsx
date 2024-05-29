@@ -9,9 +9,9 @@ function App() {
   const { todoList, loading, onAddNewTodo, onToggleTodo, onDeleteTodo } = useTodo();
 
   return (
-    <div className="App">
+    <div className="App app-container">
       <header>
-        <h1>Todo List</h1>
+        <h1 className='app-title'><span className='app-title-span'>Todo</span> List</h1>
       </header>
 
       <section>

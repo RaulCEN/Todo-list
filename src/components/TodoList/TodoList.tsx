@@ -1,4 +1,5 @@
 import React from 'react';
+import './TodoList.css'
 
 import TodoItem from '../TodoItem/TodoItem';
 import { TodoTask } from '../../utils/types';
@@ -21,10 +22,10 @@ const TodoList:  React.FunctionComponent<TodoListProps> = ({tasks, loading, onCh
     />)
 
   return (
-    <div>
-      <p>To do's ({tasks.length})</p>
+    <div className='todo-list-container'>
+      <p className='todo-list-count'>To do's ({tasks.length})</p>
 
-      {tasks.length > 0 ? toDoList : <p data-testid='empty_message'>You don't have added a to do yet</p>}
+      {tasks.length > 0 ? toDoList : <p data-testid='empty_message' className='todo-list-empty-message'>You don't have added a to do yet</p>}
     </div>
   );
 }

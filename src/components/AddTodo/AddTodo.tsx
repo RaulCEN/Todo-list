@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './AddTodo.css'
 
 interface AddTodoProps {
   loading: boolean;
@@ -20,8 +21,9 @@ const AddTodo: React.FunctionComponent<AddTodoProps> = ({ loading, onAddTodo }: 
   }
 
   return (
-    <form onSubmit={handleSubmitNewTodo}>
+    <form className='add-todo-form' onSubmit={handleSubmitNewTodo}>
       <input
+        className='add-todo-input'
         data-testid="new_todo_input"
         id='new_todo'
         name='new_todo'
@@ -33,6 +35,7 @@ const AddTodo: React.FunctionComponent<AddTodoProps> = ({ loading, onAddTodo }: 
 
       <button
         data-testid="add_button"
+        className='add-todo-button'
         type='submit'
         disabled={loading || newTodoValue === ''}
       >
