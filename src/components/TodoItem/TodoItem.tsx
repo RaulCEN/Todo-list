@@ -17,10 +17,10 @@ const TodoItem: React.FunctionComponent<TodoItemProps> = ({ task, loading, onChe
   return (
     <div>
       <label>
-        <input type='checkbox' disabled={loading} onChange={handleCheckboxChange} />
+        <input data-testid='todo_checkbox' type='checkbox' disabled={loading} onChange={handleCheckboxChange} />
         {task.name}
       </label>
-      <button disabled={loading} onClick={handleDeleteButton}>delete</button>
+      <button data-testid='delete_todo' disabled={loading} onClick={handleDeleteButton}>delete</button>
     </div>
   )
 }
