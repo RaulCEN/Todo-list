@@ -22,6 +22,7 @@ const AddTodo: React.FunctionComponent<AddTodoProps> = ({ loading, onAddTodo }: 
   return (
     <form onSubmit={handleSubmitNewTodo}>
       <input
+        data-testid="new_todo_input"
         id='new_todo'
         name='new_todo'
         placeholder='New Todo'
@@ -31,6 +32,7 @@ const AddTodo: React.FunctionComponent<AddTodoProps> = ({ loading, onAddTodo }: 
       />
 
       <button
+        data-testid="add_button"
         type='submit'
         disabled={loading || newTodoValue === ''}
       >
