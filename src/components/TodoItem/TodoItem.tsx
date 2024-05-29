@@ -17,7 +17,7 @@ const TodoItem: React.FunctionComponent<TodoItemProps> = ({ task, loading, onChe
 
   return (
     <div className='todo-item-container'>
-      <label className='todo-item-label'>
+      <label className={`todo-item-label ${task.completed ? 'todo-item-label-checked' : ''}`}>
         <input data-testid='todo_checkbox' checked={task.completed} type='checkbox' disabled={loading} onChange={handleCheckboxChange} />
         {task.name}
       </label>
